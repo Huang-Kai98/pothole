@@ -8,23 +8,44 @@ from PIL import Image
 from common import IMAGE_EXTS, add_common_args, count_files, iter_files, load_datasets, project_root, resolve_path, setup_logging
 
 
-def yolo_label_stats(label_root: Path):
+def yolo_label_stats(label_roots):
+    if isinstance(label_roots, Path):
+        label_roots = [label_roots]
     class_counts = Counter()
     annotated_images = 0
     negative_images = 0
     total_objects = 0
-    for txt in iter_files(label_root, {".txt"}):
-        lines = [ln.strip() for ln in txt.read_text(encoding="utf-8", errors="ignore").splitlines() if ln.strip()]
-        if lines:
-            annotated_images += 1
-        else:
-            negative_images += 1
-        for ln in lines:
-            parts = ln.split()
-            if parts:
-                class_counts[parts[0]] += 1
-                total_objects += 1
+    seen = set()
+    for label_root in label_roots:
+        for txt in iter_files(label_root, {".txt"}):
+            if txt in seen:
+                continue
+            seen.add(txt)
+            lines = [ln.strip() for ln in txt.read_text(encoding="utf-8", errors="ignore").splitlines() if ln.strip()]
+            if lines:
+                annotated_images += 1
+            else:
+                negative_images += 1
+            for ln in lines:
+                parts = ln.split()
+                if parts:
+                    class_counts[parts[0]] += 1
+                    total_objects += 1
     return class_counts, annotated_images, negative_images, total_objects
+
+
+def find_raw_yolo_label_roots(raw_dir: Path):
+    roots = []
+    if not raw_dir.exists():
+        return roots
+    for path in raw_dir.rglob("labels"):
+        if path.is_dir() and any(iter_files(path, {".txt"})):
+            roots.append(path)
+    return roots
+
+
+def has_yolo_labels(label_roots):
+    return any(any(iter_files(root, {".txt"})) for root in label_roots)
 
 
 def image_size_stats(root: Path, max_images: int = 500):
@@ -68,12 +89,15 @@ def main() -> int:
         raw_dir = resolve_path(ds["raw_dir"])
         converted_dir = args.converted_root / ds["name"]
         stats = count_files(raw_dir)
-        label_root = converted_dir / "labels" if (converted_dir / "labels").exists() else converted_dir
-        cls_counts, ann_imgs, neg_imgs, objects = yolo_label_stats(label_root) if converted_dir.exists() else (Counter(), 0, 0, 0)
+        if converted_dir.exists():
+            label_roots = [converted_dir / "labels" if (converted_dir / "labels").exists() else converted_dir]
+        else:
+            label_roots = find_raw_yolo_label_roots(raw_dir) if str(ds.get("annotation_format", "")).lower().find("yolo") >= 0 else []
+        cls_counts, ann_imgs, neg_imgs, objects = yolo_label_stats(label_roots) if label_roots else (Counter(), 0, 0, 0)
         size_counts = image_size_stats(raw_dir)
         top_sizes = ", ".join(f"{k}:{v}" for k, v in size_counts.most_common(3)) or "-"
         f = flags(ds)
-        detect_ok = "yes" if converted_dir.exists() and any(iter_files(label_root, {".txt"})) else "no"
+        detect_ok = "yes" if has_yolo_labels(label_roots) else "no"
         segment_ok = "yes" if f["mask"] else "possible_after_mask_conversion"
         potholes = cls_counts.get("0", 0) if "pothole" in [str(c).lower() for c in ds.get("classes", [])] or "D40" in ds.get("classes", []) else 0
         ann_files = stats["xml"] + stats["json"] + stats["txt"] + stats["mask_like_png"]

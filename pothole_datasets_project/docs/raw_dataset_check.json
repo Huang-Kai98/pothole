@@ -1,15 +1,15 @@
 [
   {
     "name": "HRP4K",
-    "status": "manual_required",
-    "source": "Zenodo / paper data page",
+    "status": "downloaded",
+    "source": "https://doi.org/10.5281/zenodo.17522874",
     "raw_dir": "raw/HRP4K",
     "stats": {
-      "total_files": 0,
-      "images": 0,
+      "total_files": 10092,
+      "images": 4086,
       "xml": 0,
-      "json": 0,
-      "txt": 0,
+      "json": 3,
+      "txt": 6003,
       "mask_like_png": 0
     }
   },

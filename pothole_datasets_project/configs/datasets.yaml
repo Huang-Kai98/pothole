@@ -2,18 +2,19 @@ datasets:
   - name: HRP4K
     priority: 1
     task_type: object_detection
-    source_type: manual
-    source: "Zenodo / paper data page"
-    download_command: ""
+    source_type: zenodo
+    source: "https://doi.org/10.5281/zenodo.17522874"
+    zenodo_record: 17522874
+    download_command: "python scripts/download_zenodo.py --dataset HRP4K"
     raw_dir: raw/HRP4K
     annotation_format: "YOLO TXT; COCO JSON"
     classes: [pothole]
-    license: "Check source page before use"
-    citation: "Cite HRP4K paper and dataset page"
-    status: manual_download_required
+    license: "CC BY 4.0"
+    citation: "HRP4K, Zenodo DOI: 10.5281/zenodo.17522874; cite the Scientific Data paper"
+    status: not_downloaded
     scene_characteristics: "4K high-resolution road images; positive and negative samples; small potholes"
     recommended_usage: "Small-object pothole detection and high-resolution robustness evaluation"
-    limitations: "Automatic stable URL not configured; verify license and citation manually"
+    limitations: "Large download; verify train/val/test split and annotation folder layout after extraction"
 
   - name: UDTIRI
     priority: 1

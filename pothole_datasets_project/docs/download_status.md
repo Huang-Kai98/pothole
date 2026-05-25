@@ -2,7 +2,7 @@
 
 | Dataset | Status | Source | Raw path | File summary |
 |---|---|---|---|---|
-| HRP4K | manual_required | Zenodo / paper data page | `raw/HRP4K` | total_files=0, images=0, xml=0, json=0, txt=0, mask_like_png=0 |
+| HRP4K | downloaded | https://doi.org/10.5281/zenodo.17522874 | `raw/HRP4K` | total_files=10092, images=4086, xml=0, json=3, txt=6003, mask_like_png=0 |
 | UDTIRI | downloaded | jiahangli617/udtiri | `raw/UDTIRI` | total_files=2708, images=2700, xml=0, json=3, txt=5, mask_like_png=0 |
 | RDD2022 | downloaded | aliabdelmenam/rdd-2022 | `raw/RDD2022` | total_files=76770, images=38385, xml=0, json=0, txt=38385, mask_like_png=0 |
 | RDD2020 | manual_required | Mendeley Data DOI: 10.17632/5ty2wb6gvg.1 | `raw/RDD2020` | total_files=0, images=0, xml=0, json=0, txt=0, mask_like_png=0 |

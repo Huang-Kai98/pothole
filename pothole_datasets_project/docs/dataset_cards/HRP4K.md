@@ -1,11 +1,11 @@
 # HRP4K
 ## Source
-Zenodo / paper data page
+https://doi.org/10.5281/zenodo.17522874
 
 ## Download
-Status: `manual_download_required`
+Status: `not_downloaded`
 
-Command: `manual_download_required`
+Command: `python scripts/download_zenodo.py --dataset HRP4K`
 
 Expected raw path: `raw/HRP4K`
 
@@ -19,7 +19,7 @@ YOLO TXT; COCO JSON
 pothole
 
 ## Scale
-Current local scan: total_files: 0, images: 0, xml: 0, json: 0, txt: 0, mask_like_png: 0
+Current local scan: total_files: 10092, images: 4086, xml: 0, json: 3, txt: 6003, mask_like_png: 0
 
 ## Scene Characteristics
 4K high-resolution road images; positive and negative samples; small potholes
@@ -28,13 +28,13 @@ Current local scan: total_files: 0, images: 0, xml: 0, json: 0, txt: 0, mask_lik
 Small-object pothole detection and high-resolution robustness evaluation
 
 ## Limitations
-Automatic stable URL not configured; verify license and citation manually
+Large download; verify train/val/test split and annotation folder layout after extraction
 
 ## License / Usage Restriction
-Check source page before use
+CC BY 4.0
 
 ## Citation
-Cite HRP4K paper and dataset page
+HRP4K, Zenodo DOI: 10.5281/zenodo.17522874; cite the Scientific Data paper
 
 ## Conversion Notes
 Use the matching converter based on `annotation_format`. For RDD-family datasets, use `scripts/convert_rdd_d40_to_yolo.py` to map `D40` to `pothole`. For segmentation masks, inspect pixel values before running `scripts/convert_masks_to_yolo_seg.py`.
