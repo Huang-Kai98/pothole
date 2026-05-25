@@ -19,7 +19,7 @@ Check dataset release; often YOLO/COCO variants
 pothole
 
 ## Scale
-Current local scan: total_files: 0, images: 0, xml: 0, json: 0, txt: 0, mask_like_png: 0
+Current local scan: total_files: 1330, images: 665, xml: 665, json: 0, txt: 0, mask_like_png: 0
 
 ## Scene Characteristics
 Small pothole detection dataset

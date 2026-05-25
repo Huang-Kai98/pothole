@@ -34,7 +34,10 @@ def main() -> int:
                 logging.error("%s has no gdrive_id.", ds["name"])
                 status = "failed"
             else:
-                cmd = ["gdown", "--id", file_id, "-O", str(out_path)]
+                # gdown v6 accepts either a full URL or a file id as the
+                # positional argument. Older examples used --id, which is no
+                # longer accepted by current releases.
+                cmd = ["gdown", file_id, "-O", str(out_path)]
                 try:
                     subprocess.run(cmd, check=True)
                     status = "downloaded"

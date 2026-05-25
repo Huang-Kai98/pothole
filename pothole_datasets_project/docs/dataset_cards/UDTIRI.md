@@ -19,7 +19,7 @@ COCO JSON; masks
 pothole
 
 ## Scale
-Current local scan: total_files: 0, images: 0, xml: 0, json: 0, txt: 0, mask_like_png: 0
+Current local scan: total_files: 2708, images: 2700, xml: 0, json: 3, txt: 5, mask_like_png: 0
 
 ## Scene Characteristics
 RGB pothole images; suitable for detection and segmentation

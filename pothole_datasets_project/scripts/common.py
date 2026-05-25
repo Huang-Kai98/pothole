@@ -48,6 +48,8 @@ def iter_files(root: Path, exts: Optional[Iterable[str]] = None) -> Iterable[Pat
         return
     lower_exts = {e.lower() for e in exts} if exts else None
     for p in root.rglob("*"):
+        if ".git" in p.parts or p.name in {".gitkeep", "download_manifest.json"}:
+            continue
         if p.is_file() and (lower_exts is None or p.suffix.lower() in lower_exts):
             yield p
 

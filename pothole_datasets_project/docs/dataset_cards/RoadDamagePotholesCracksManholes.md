@@ -19,7 +19,7 @@ YOLO TXT
 pothole, crack, manhole
 
 ## Scale
-Current local scan: total_files: 0, images: 0, xml: 0, json: 0, txt: 0, mask_like_png: 0
+Current local scan: total_files: 6031, images: 2009, xml: 0, json: 1, txt: 4018, mask_like_png: 0
 
 ## Scene Characteristics
 Road damage with potholes, cracks, and manholes

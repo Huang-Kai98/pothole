@@ -15,29 +15,29 @@
   },
   {
     "name": "UDTIRI",
-    "status": "not_downloaded",
+    "status": "downloaded",
     "source": "jiahangli617/udtiri",
     "raw_dir": "raw/UDTIRI",
     "stats": {
-      "total_files": 0,
-      "images": 0,
+      "total_files": 2708,
+      "images": 2700,
       "xml": 0,
-      "json": 0,
-      "txt": 0,
+      "json": 3,
+      "txt": 5,
       "mask_like_png": 0
     }
   },
   {
     "name": "RDD2022",
-    "status": "not_downloaded",
+    "status": "downloaded",
     "source": "aliabdelmenam/rdd-2022",
     "raw_dir": "raw/RDD2022",
     "stats": {
-      "total_files": 0,
-      "images": 0,
+      "total_files": 76770,
+      "images": 38385,
       "xml": 0,
       "json": 0,
-      "txt": 0,
+      "txt": 38385,
       "mask_like_png": 0
     }
   },
@@ -113,12 +113,12 @@
   },
   {
     "name": "RuiFanStereoPothole",
-    "status": "not_downloaded",
+    "status": "downloaded",
     "source": "https://github.com/ruirangerfan/stereo_pothole_datasets",
     "raw_dir": "raw/RuiFanStereoPothole",
     "stats": {
-      "total_files": 0,
-      "images": 0,
+      "total_files": 405,
+      "images": 268,
       "xml": 0,
       "json": 0,
       "txt": 0,
@@ -183,13 +183,13 @@
   },
   {
     "name": "RoboflowKagglePothole",
-    "status": "not_downloaded",
+    "status": "downloaded",
     "source": "andrewmvd/pothole-detection",
     "raw_dir": "raw/RoboflowKagglePothole",
     "stats": {
-      "total_files": 0,
-      "images": 0,
-      "xml": 0,
+      "total_files": 1330,
+      "images": 665,
+      "xml": 665,
       "json": 0,
       "txt": 0,
       "mask_like_png": 0
@@ -197,15 +197,15 @@
   },
   {
     "name": "RoadDamagePotholesCracksManholes",
-    "status": "not_downloaded",
+    "status": "downloaded",
     "source": "lorenzoarcioni/road-damage-dataset-potholes-cracks-and-manholes",
     "raw_dir": "raw/RoadDamagePotholesCracksManholes",
     "stats": {
-      "total_files": 0,
-      "images": 0,
+      "total_files": 6031,
+      "images": 2009,
       "xml": 0,
-      "json": 0,
-      "txt": 0,
+      "json": 1,
+      "txt": 4018,
       "mask_like_png": 0
     }
   }
