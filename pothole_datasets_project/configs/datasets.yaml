@@ -1,0 +1,241 @@
+datasets:
+  - name: HRP4K
+    priority: 1
+    task_type: object_detection
+    source_type: manual
+    source: "Zenodo / paper data page"
+    download_command: ""
+    raw_dir: raw/HRP4K
+    annotation_format: "YOLO TXT; COCO JSON"
+    classes: [pothole]
+    license: "Check source page before use"
+    citation: "Cite HRP4K paper and dataset page"
+    status: manual_download_required
+    scene_characteristics: "4K high-resolution road images; positive and negative samples; small potholes"
+    recommended_usage: "Small-object pothole detection and high-resolution robustness evaluation"
+    limitations: "Automatic stable URL not configured; verify license and citation manually"
+
+  - name: UDTIRI
+    priority: 1
+    task_type: "object_detection; semantic_segmentation; instance_segmentation"
+    source_type: kaggle
+    source: jiahangli617/udtiri
+    download_command: "kaggle datasets download -d jiahangli617/udtiri -p raw/UDTIRI --unzip"
+    raw_dir: raw/UDTIRI
+    annotation_format: "COCO JSON; masks"
+    classes: [pothole]
+    license: "Check Kaggle dataset terms"
+    citation: "Cite UDTIRI dataset page"
+    status: not_downloaded
+    scene_characteristics: "RGB pothole images; suitable for detection and segmentation"
+    recommended_usage: "Instance/semantic segmentation and VLM benchmarking"
+    limitations: "Kaggle access and dataset terms required"
+
+  - name: RDD2022
+    priority: 1
+    task_type: object_detection
+    source_type: kaggle
+    source: aliabdelmenam/rdd-2022
+    download_command: "kaggle datasets download -d aliabdelmenam/rdd-2022 -p raw/RDD2022 --unzip"
+    raw_dir: raw/RDD2022
+    annotation_format: "Pascal VOC XML"
+    classes: [D00, D10, D20, D40]
+    license: "Check Kaggle dataset terms"
+    citation: "Cite RDD2022 dataset page / Road Damage Detection Challenge"
+    status: not_downloaded
+    scene_characteristics: "Road damage detection; multiple countries/domains"
+    recommended_usage: "Extract D40 as pothole; use cracks as hard negatives or multiclass baseline"
+    limitations: "Class imbalance; domain shifts across countries"
+
+  - name: RDD2020
+    priority: 1
+    task_type: object_detection
+    source_type: manual
+    source: "Mendeley Data DOI: 10.17632/5ty2wb6gvg.1"
+    download_command: ""
+    raw_dir: raw/RDD2020
+    annotation_format: "Pascal VOC XML"
+    classes: [D00, D10, D20, D40]
+    license: "Check Mendeley Data terms"
+    citation: "Mendeley Data DOI: 10.17632/5ty2wb6gvg.1"
+    status: manual_download_required
+    scene_characteristics: "Road damage detection dataset with RDD classes"
+    recommended_usage: "Extract D40 for pothole detection and compare with RDD2022"
+    limitations: "Manual download recommended; verify redistribution rights"
+
+  - name: NPD
+    priority: 1
+    task_type: object_detection
+    source_type: gdrive
+    source: "https://github.com/hhaozhang/NPD"
+    gdrive_id: 1F7IBMEwf25ZVgJC2RrqbCbiuZM-wc1f0
+    download_command: "gdown --id 1F7IBMEwf25ZVgJC2RrqbCbiuZM-wc1f0 -O raw/NPD/npd_archive"
+    raw_dir: raw/NPD
+    annotation_format: "Check dataset release"
+    classes: [pothole]
+    license: "Non-commercial research use; check repository"
+    citation: "Cite NPD GitHub / paper if provided"
+    status: not_downloaded
+    scene_characteristics: "Nighttime and low-light pothole detection"
+    recommended_usage: "Night/low-light robustness evaluation"
+    limitations: "Usage restrictions; annotation format should be checked after download"
+
+  - name: WaterFilledDryPotholes
+    priority: 1
+    task_type: object_detection
+    source_type: manual
+    source: "Mendeley Data DOI: 10.17632/tp95cdvgm8.1"
+    download_command: ""
+    raw_dir: raw/WaterFilledDryPotholes
+    annotation_format: "Pascal VOC XML; YOLO TXT"
+    classes: [pothole]
+    license: "Check Mendeley Data terms"
+    citation: "Mendeley Data DOI: 10.17632/tp95cdvgm8.1"
+    status: manual_download_required
+    scene_characteristics: "Water-filled and dry potholes"
+    recommended_usage: "Wet-road and post-rain robustness"
+    limitations: "Manual download recommended"
+
+  - name: PotholeMix
+    priority: 2
+    task_type: semantic_segmentation
+    source_type: manual
+    source: "Mendeley Data DOI: 10.17632/kfth5g2xk3.2"
+    download_command: ""
+    raw_dir: raw/PotholeMix
+    annotation_format: "image-mask pairs; RGB-D video"
+    classes: [pothole, crack]
+    license: "Check Mendeley Data terms"
+    citation: "Mendeley Data DOI: 10.17632/kfth5g2xk3.2"
+    status: manual_download_required
+    scene_characteristics: "Pothole and crack segmentation; RGB-D video"
+    recommended_usage: "Segmentation and depth-aware obstacle studies"
+    limitations: "Manual download and mask convention inspection required"
+
+  - name: Pothole600
+    priority: 2
+    task_type: "RGB-D/stereo semantic_segmentation"
+    source_type: manual
+    source: "https://sites.google.com/view/pothole-600/dataset"
+    download_command: ""
+    raw_dir: raw/Pothole600
+    annotation_format: "RGB; disparity; segmentation labels"
+    classes: [pothole]
+    license: "Check dataset site terms"
+    citation: "Cite Pothole-600 dataset / paper"
+    status: manual_download_required
+    scene_characteristics: "ZED stereo RGB-D pothole segmentation"
+    recommended_usage: "Depth-aware obstacle avoidance"
+    limitations: "Manual download required; stereo calibration assumptions should be checked"
+
+  - name: RuiFanStereoPothole
+    priority: 2
+    task_type: "stereo_detection; segmentation; 3D"
+    source_type: github
+    source: "https://github.com/ruirangerfan/stereo_pothole_datasets"
+    download_command: "git clone https://github.com/ruirangerfan/stereo_pothole_datasets raw/RuiFanStereoPothole"
+    raw_dir: raw/RuiFanStereoPothole
+    annotation_format: "rgb; disparity; transformed disparity; pixel-level labels; point cloud"
+    classes: [pothole]
+    license: "Check GitHub repository license"
+    citation: "Cite repository and associated papers"
+    status: not_downloaded
+    scene_characteristics: "Stereo data with labels and point clouds"
+    recommended_usage: "3D pothole perception and depth-assisted avoidance"
+    limitations: "Large files may require Git LFS or manual links"
+
+  - name: CracksAndPotholesRoadImages
+    priority: 2
+    task_type: semantic_segmentation
+    source_type: manual
+    source: "https://biankatpas.github.io/Cracks-and-Potholes-in-Road-Images-Dataset/"
+    download_command: ""
+    raw_dir: raw/CracksAndPotholesRoadImages
+    annotation_format: "semantic mask"
+    classes: [road, crack, pothole]
+    license: "Check project page terms"
+    citation: "Cite project page / associated paper"
+    status: manual_download_required
+    scene_characteristics: "Road, crack, and pothole mask classes"
+    recommended_usage: "Joint drivable-road and pothole segmentation"
+    limitations: "Manual download and class color-map verification required"
+
+  - name: MWPD
+    priority: 2
+    task_type: object_detection
+    source_type: manual
+    source: "Mendeley Data DOI: 10.17632/s5hx9n2jc3.2"
+    download_command: ""
+    raw_dir: raw/MWPD
+    annotation_format: "Check dataset release"
+    classes: [pothole]
+    license: "Check Mendeley Data terms"
+    citation: "Mendeley Data DOI: 10.17632/s5hx9n2jc3.2"
+    status: manual_download_required
+    scene_characteristics: "Multi-weather and multi-lighting scenes: rain, day, dusk, night"
+    recommended_usage: "Weather and illumination robustness"
+    limitations: "Manual download and annotation inspection required"
+
+  - name: UAVRoadAnomalyYOLO
+    priority: 2
+    task_type: object_detection
+    source_type: manual
+    source: "Mendeley Data DOI: 10.17632/c6f2b7mx9t.1"
+    download_command: ""
+    raw_dir: raw/UAVRoadAnomalyYOLO
+    annotation_format: "YOLO TXT"
+    classes: [pothole, crack, rutting, raveling]
+    license: "Check Mendeley Data terms"
+    citation: "Mendeley Data DOI: 10.17632/c6f2b7mx9t.1"
+    status: manual_download_required
+    scene_characteristics: "UAV and ground-camera road anomalies"
+    recommended_usage: "Aerial-domain detection and cross-view experiments"
+    limitations: "Manual download required; class order must be verified"
+
+  - name: RoadDamageVision
+    priority: 2
+    task_type: object_detection
+    source_type: manual
+    source: "Mendeley Data DOI: 10.17632/ypm4h4z25c.3"
+    download_command: ""
+    raw_dir: raw/RoadDamageVision
+    annotation_format: "Check dataset release"
+    classes: [D00, D10, D20, D40]
+    license: "Check Mendeley Data terms"
+    citation: "Mendeley Data DOI: 10.17632/ypm4h4z25c.3"
+    status: manual_download_required
+    scene_characteristics: "Road damage detection with D40 potholes"
+    recommended_usage: "Domain adaptation and class imbalance experiments"
+    limitations: "Manual download and label schema verification required"
+
+  - name: RoboflowKagglePothole
+    priority: 3
+    task_type: object_detection
+    source_type: kaggle
+    source: andrewmvd/pothole-detection
+    download_command: "kaggle datasets download -d andrewmvd/pothole-detection -p raw/RoboflowKagglePothole --unzip"
+    raw_dir: raw/RoboflowKagglePothole
+    annotation_format: "Check dataset release; often YOLO/COCO variants"
+    classes: [pothole]
+    license: "Check Kaggle dataset terms"
+    citation: "Cite Kaggle dataset page"
+    status: not_downloaded
+    scene_characteristics: "Small pothole detection dataset"
+    recommended_usage: "Quick demos and smoke tests, not main benchmark"
+    limitations: "Small scale and possible redistribution constraints"
+
+  - name: RoadDamagePotholesCracksManholes
+    priority: 3
+    task_type: object_detection
+    source_type: kaggle
+    source: lorenzoarcioni/road-damage-dataset-potholes-cracks-and-manholes
+    download_command: "kaggle datasets download -d lorenzoarcioni/road-damage-dataset-potholes-cracks-and-manholes -p raw/RoadDamagePotholesCracksManholes --unzip"
+    raw_dir: raw/RoadDamagePotholesCracksManholes
+    annotation_format: "YOLO TXT"
+    classes: [pothole, crack, manhole]
+    license: "Check Kaggle dataset terms"
+    citation: "Cite Kaggle dataset page"
+    status: not_downloaded
+    scene_characteristics: "Road damage with potholes, cracks, and manholes"
+    recommended_usage: "Hard-negative training to reduce manhole/pothole confusion"
+    limitations: "Verify class order before conversion or unification"

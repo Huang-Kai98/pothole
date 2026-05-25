@@ -1,0 +1,212 @@
+[
+  {
+    "name": "HRP4K",
+    "status": "manual_required",
+    "source": "Zenodo / paper data page",
+    "raw_dir": "raw/HRP4K",
+    "stats": {
+      "total_files": 0,
+      "images": 0,
+      "xml": 0,
+      "json": 0,
+      "txt": 0,
+      "mask_like_png": 0
+    }
+  },
+  {
+    "name": "UDTIRI",
+    "status": "not_downloaded",
+    "source": "jiahangli617/udtiri",
+    "raw_dir": "raw/UDTIRI",
+    "stats": {
+      "total_files": 0,
+      "images": 0,
+      "xml": 0,
+      "json": 0,
+      "txt": 0,
+      "mask_like_png": 0
+    }
+  },
+  {
+    "name": "RDD2022",
+    "status": "not_downloaded",
+    "source": "aliabdelmenam/rdd-2022",
+    "raw_dir": "raw/RDD2022",
+    "stats": {
+      "total_files": 0,
+      "images": 0,
+      "xml": 0,
+      "json": 0,
+      "txt": 0,
+      "mask_like_png": 0
+    }
+  },
+  {
+    "name": "RDD2020",
+    "status": "manual_required",
+    "source": "Mendeley Data DOI: 10.17632/5ty2wb6gvg.1",
+    "raw_dir": "raw/RDD2020",
+    "stats": {
+      "total_files": 0,
+      "images": 0,
+      "xml": 0,
+      "json": 0,
+      "txt": 0,
+      "mask_like_png": 0
+    }
+  },
+  {
+    "name": "NPD",
+    "status": "not_downloaded",
+    "source": "https://github.com/hhaozhang/NPD",
+    "raw_dir": "raw/NPD",
+    "stats": {
+      "total_files": 0,
+      "images": 0,
+      "xml": 0,
+      "json": 0,
+      "txt": 0,
+      "mask_like_png": 0
+    }
+  },
+  {
+    "name": "WaterFilledDryPotholes",
+    "status": "manual_required",
+    "source": "Mendeley Data DOI: 10.17632/tp95cdvgm8.1",
+    "raw_dir": "raw/WaterFilledDryPotholes",
+    "stats": {
+      "total_files": 0,
+      "images": 0,
+      "xml": 0,
+      "json": 0,
+      "txt": 0,
+      "mask_like_png": 0
+    }
+  },
+  {
+    "name": "PotholeMix",
+    "status": "manual_required",
+    "source": "Mendeley Data DOI: 10.17632/kfth5g2xk3.2",
+    "raw_dir": "raw/PotholeMix",
+    "stats": {
+      "total_files": 0,
+      "images": 0,
+      "xml": 0,
+      "json": 0,
+      "txt": 0,
+      "mask_like_png": 0
+    }
+  },
+  {
+    "name": "Pothole600",
+    "status": "manual_required",
+    "source": "https://sites.google.com/view/pothole-600/dataset",
+    "raw_dir": "raw/Pothole600",
+    "stats": {
+      "total_files": 0,
+      "images": 0,
+      "xml": 0,
+      "json": 0,
+      "txt": 0,
+      "mask_like_png": 0
+    }
+  },
+  {
+    "name": "RuiFanStereoPothole",
+    "status": "not_downloaded",
+    "source": "https://github.com/ruirangerfan/stereo_pothole_datasets",
+    "raw_dir": "raw/RuiFanStereoPothole",
+    "stats": {
+      "total_files": 0,
+      "images": 0,
+      "xml": 0,
+      "json": 0,
+      "txt": 0,
+      "mask_like_png": 0
+    }
+  },
+  {
+    "name": "CracksAndPotholesRoadImages",
+    "status": "manual_required",
+    "source": "https://biankatpas.github.io/Cracks-and-Potholes-in-Road-Images-Dataset/",
+    "raw_dir": "raw/CracksAndPotholesRoadImages",
+    "stats": {
+      "total_files": 0,
+      "images": 0,
+      "xml": 0,
+      "json": 0,
+      "txt": 0,
+      "mask_like_png": 0
+    }
+  },
+  {
+    "name": "MWPD",
+    "status": "manual_required",
+    "source": "Mendeley Data DOI: 10.17632/s5hx9n2jc3.2",
+    "raw_dir": "raw/MWPD",
+    "stats": {
+      "total_files": 0,
+      "images": 0,
+      "xml": 0,
+      "json": 0,
+      "txt": 0,
+      "mask_like_png": 0
+    }
+  },
+  {
+    "name": "UAVRoadAnomalyYOLO",
+    "status": "manual_required",
+    "source": "Mendeley Data DOI: 10.17632/c6f2b7mx9t.1",
+    "raw_dir": "raw/UAVRoadAnomalyYOLO",
+    "stats": {
+      "total_files": 0,
+      "images": 0,
+      "xml": 0,
+      "json": 0,
+      "txt": 0,
+      "mask_like_png": 0
+    }
+  },
+  {
+    "name": "RoadDamageVision",
+    "status": "manual_required",
+    "source": "Mendeley Data DOI: 10.17632/ypm4h4z25c.3",
+    "raw_dir": "raw/RoadDamageVision",
+    "stats": {
+      "total_files": 0,
+      "images": 0,
+      "xml": 0,
+      "json": 0,
+      "txt": 0,
+      "mask_like_png": 0
+    }
+  },
+  {
+    "name": "RoboflowKagglePothole",
+    "status": "not_downloaded",
+    "source": "andrewmvd/pothole-detection",
+    "raw_dir": "raw/RoboflowKagglePothole",
+    "stats": {
+      "total_files": 0,
+      "images": 0,
+      "xml": 0,
+      "json": 0,
+      "txt": 0,
+      "mask_like_png": 0
+    }
+  },
+  {
+    "name": "RoadDamagePotholesCracksManholes",
+    "status": "not_downloaded",
+    "source": "lorenzoarcioni/road-damage-dataset-potholes-cracks-and-manholes",
+    "raw_dir": "raw/RoadDamagePotholesCracksManholes",
+    "stats": {
+      "total_files": 0,
+      "images": 0,
+      "xml": 0,
+      "json": 0,
+      "txt": 0,
+      "mask_like_png": 0
+    }
+  }
+]

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Large/local dataset artifacts
+pothole_datasets_project/raw/*
+!pothole_datasets_project/raw/.gitkeep
+pothole_datasets_project/converted/*
+!pothole_datasets_project/converted/.gitkeep
+pothole_datasets_project/unified_yolo/images/**/*
+!pothole_datasets_project/unified_yolo/images/**/.gitkeep
+pothole_datasets_project/unified_yolo/labels/**/*
+!pothole_datasets_project/unified_yolo/labels/**/.gitkeep
+pothole_datasets_project/unified_yolo/manifest.json
+
+# Download manifests generated from local state
+pothole_datasets_project/raw/**/download_manifest.json
+pothole_datasets_project/docs/*_download_manifest.json
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/

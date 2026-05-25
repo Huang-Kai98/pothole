@@ -1,0 +1,8 @@
+pothole:
+  aliases: [pothole, potholes, D40, road_pothole]
+crack:
+  aliases: [D00, D10, D20, crack, alligator_crack, longitudinal_crack, transverse_crack]
+manhole:
+  aliases: [manhole, maintenance_hole]
+repair:
+  aliases: [repair, repaired_area, patch]

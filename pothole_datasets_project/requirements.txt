@@ -1,0 +1,13 @@
+kaggle
+gdown
+requests
+tqdm
+pyyaml
+opencv-python
+pillow
+lxml
+pycocotools
+shapely
+numpy
+pandas
+ultralytics
